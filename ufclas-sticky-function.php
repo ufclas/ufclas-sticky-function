@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: UFCLAS Sticky Function
- * Plugin URI: https://clas.ufl.edu/
+ * Plugin URI: https://github.com/ufclas/ufclas-sticky-function/blob/main/README.md
  * Description: This plugin is for making navigation stick using sticky style.
  * Version: 1.0
  * Author: Fnu Ojasvi
