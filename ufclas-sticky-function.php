@@ -8,6 +8,24 @@
  * Author URI: https://commsupport.clas.ufl.edu
  */
 
+
+ /*==================================
+
+ Add sticky style
+
+ ====================================*/
+ function add_sticky_style() {
+     ?>
+     <style>
+         .sticky {
+             position: sticky;
+             top: 0;
+         }
+     </style>
+     <?php
+ }
+ add_action('wp_head', 'add_sticky_style');
+
 /*==================================
 
 Set height of parent of sticky
