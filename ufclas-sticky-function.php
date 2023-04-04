@@ -19,7 +19,7 @@ function set_sticky_height() {
     <script>
         if (document.querySelector('.sticky')) {
             function setStickyHeight() {
-                const parentDiv = document.querySelector('.col-sm-9.sidebar-to-right.sibling-of-sticky');
+                const parentDiv = document.querySelector('.sibling-of-sticky');
                 const parent = document.querySelector('.parent-of-sticky');
                 const parentHeight = parentDiv.getBoundingClientRect().height;
                 parent.style.height = (parentHeight) + 'px';
