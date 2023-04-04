@@ -17,10 +17,19 @@
  function add_sticky_style() {
      ?>
      <style>
-         .sticky {
-             position: sticky;
-             top: 0;
-         }
+     @media (min-width: 768px) {
+
+        .sticky {
+            position: sticky;
+            top: 0;
+        }
+     }
+     @media (max-width: 768px) {
+
+        .sticky {
+            display: none;
+        }
+     }
      </style>
      <?php
  }
