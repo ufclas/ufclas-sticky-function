@@ -20,6 +20,7 @@
      @media (min-width: 768px) {
 
         .sticky {
+            position: -webkit-sticky;
             position: sticky;
             top: 0;
         }
@@ -44,15 +45,21 @@ Set height of parent of sticky
 function set_sticky_height() {
     ?>
     <script>
-        if (document.querySelector('.sticky')) {
-            function setStickyHeight() {
-                const parentDiv = document.querySelector('.sibling-of-sticky');
-                const parent = document.querySelector('.parent-of-sticky');
-                const parentHeight = parentDiv.getBoundingClientRect().height;
-                parent.style.height = (parentHeight) + 'px';
+            if (document.querySelector('.sticky')) {
+                function setStickyHeight() {
+                    const parentDiv = document.querySelector('.col-sm-9.sidebar-to-right');
+                    const parent = document.querySelector('.parent-of-sticky');
+                    const parentHeight = parentDiv.getBoundingClientRect().height;
+                    parent.style.height = (parentHeight) + 'px';
+                }
+                 // Add height style only if min-width is 768px
+                 if (window.innerWidth >= 768) {
+                        parent.style.height = (parentHeight) + 'px';
+                    } else {
+                        parent.style.height = 'auto';
+                    }
+                setStickyHeight();
             }
-            setStickyHeight();
-        }
     </script>
     <?php
 }
